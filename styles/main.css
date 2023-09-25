@@ -1,0 +1,311 @@
+@import url('./news.css');
+@import url('./footer.css');
+
+:root{
+    /* Dark theme */
+  --bgColor-Dark: #000;
+  --textColor-Dark: #ffffff;  
+  --footer-text-color: rgb(143, 141, 141);
+}
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+ul,li,a, h1, h2, h3, h4, h5, h6, p, a{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Alumni Sans', sans-serif;
+}
+body{
+    background-color: black;
+    overflow-x: hidden;
+    color: var(--textColor-Dark);
+}
+html{
+  background-color: black;
+}
+
+.container{
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+.hreader_logo>img{
+  width: 120px;
+}
+.header__meni-link{
+  color: var(--textColor-Dark);
+}
+.preview{
+  color: var(--textColor-Dark);
+}
+
+.preview__title{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 64px;
+  text-align: center;
+}
+
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: -1000vw 00px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 00px 00px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 00px 00px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 00px 00px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: -5vw 00px;
+  }
+}
+header{
+  padding: 15px 0;
+  z-index: 100;
+  position: relative;
+  
+}
+
+/* Main styles */
+.preview {
+
+  z-index: 50;
+
+  min-height: 100vh;
+  background: url("../images/bg.jpg") repeat-x 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 1000.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  overflow: hidden;
+}
+
+.preview__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.preview-philosophy{
+  margin-top: 10%;
+}
+.preview::after{
+  content: url('../images/241_1.svg');
+  position: absolute;
+  left:  0;
+  bottom: 0;
+}
+.preview::before{
+  /* content: url('../images/pngegg.png'); */
+  position: absolute;
+  bottom: -200px;
+  right: 0;
+}
+
+
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: centerw;
+}
+.header__menu-list{
+  display: flex;
+  gap: 20px;
+}
+
+.header_logo{
+  color: var(--textColor-Dark);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+}
+/* --------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+.basic-text{
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 20px;
+  letter-spacing: .135rem;
+}
+
+
+.title{
+  font-family: 'Alumni Sans', sans-serif;
+  color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(30deg, rgb(212, 80, 212), rgb(218, 162, 42));
+  font-weight: 800;
+  letter-spacing: .135rem;
+  font-size: 64px;
+  line-height: 38px;
+}
+
+
+.concerts{
+  padding: 200px 0;
+  background-image: url('../images/concerts.jpg');
+  background-repeat: no-repeat;
+filter: ;
+  background-size: cover;
+  background-position: center -390px;
+  border-bottom: 1px solid rgb(212, 80, 212);
+  border-top: 1px solid rgb(212, 80, 212);
+}
+.concerts__inner{
+  text-align: end;
+}
+.concerts__inner>p{
+  font-size: 24px;
+  margin-top: 15px;
+}
+.concerts__inner>a{
+  border: 1px solid var(--textColor-Dark);
+  border-radius: 10px;
+  margin-top: 15px;
+  display: inline-block;
+  color: var(--textColor-Dark);
+  font-size: 24px;
+  transition: all .4s ease;
+  padding: 10px 20px;
+}
+.concerts__inner>a:not(:hover){
+  color: var(--textColor-Dark);
+  background-color: transparent;
+}
+.concerts__inner>a:hover{
+  background-color: #000;
+  color: #ffffff;
+}
+
+
+
+/* 
+.merch{
+  background-image: url('../images/merch.jpg');
+  padding: 150px 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  filter: brightness(-2);
+} */
+.merch{
+  border-bottom: 1px solid rgb(212, 80, 212);
+  border-top: 1px solid rgb(212, 80, 212);
+}
+.merch-right{
+  max-width: 900px;
+  height: auto;
+}
+.merch__inner{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.merch-text>p{
+  font-size: 24px;
+  margin-top: 30px;
+}
+.merch-text{
+  margin-top: 50px;
+}
+
+
+.album__inner{
+  display: flex;
+  justify-content: center;
+}
+.album-cover{
+  width: 250px !important;
+  object-fit: cover;
+  height: 320px;
+}
+.album-cover:not(:hover){
+  transition: all .4s ease;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.album-cover:hover{
+  transition: all .4s ease;
+  transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+}
+
+
+
+
+.card-item{
+  height: 406px;
+  position: relative;
+  display: flex;
+  gap: 100px !important;
+}
+.card-item>img, .card-name{
+  width: 300px;
+}
+.card-name{
+  text-transform: uppercase;
+  font-size: 28px;
+}
+.card-name, .price{
+  width: 250px;
+}
+.price{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+.price>a{
+  color: var(--textColor-Dark);
+  border: 1px solid var(--textColor-Dark);
+  border-radius: 3px;
+  padding: 7px 20px;
+
+}
+.price>*{
+  font-size: 22px;
+}
+
+
+.preview__inner{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 45vh;
+}
